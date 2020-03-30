@@ -1,4 +1,3 @@
-<pre>
 <?php
 require __DIR__ . '/reorderFormItemsController.php';
 use controller\reorderFormItemsController as reorderController;
