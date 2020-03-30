@@ -14,11 +14,14 @@ class reorderFormItemsController {
 
     private $conn;
     private $users;
+    private $userIds = array();
 
     public function __construct() {
         $this->setConnection();
 
         $this->users = $this->getUsers();
+
+        $this->setUserIds();
     }
 
     private function setConnection() {
@@ -40,6 +43,12 @@ class reorderFormItemsController {
         // set the resulting array to associative
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         return $stmt->fetchAll();
+    }
+
+    private function setUserIds() {
+        foreach ($this->users as $user) {
+            array_push($this->userIds, $user['id']);
+        }
     }
 
     public function showUsersInTable() {
@@ -87,6 +96,9 @@ TableRows;
         try {
             $newOrder = array();
             foreach ($postData['userId'] as $key=>$userId) {
+                if(!in_array($userId, $this->userIds)) {
+                    throw new Exception('no such user found');
+                }
                 array_push($newOrder, htmlspecialchars($userId));
             }
         } catch (Exception $e) {

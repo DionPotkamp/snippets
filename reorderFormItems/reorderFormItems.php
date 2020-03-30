@@ -68,6 +68,7 @@ $reorder = new reorderController();
             window.setTimeout(function () {
                 $(".alert").fadeTo(2000, 500).slideUp(500, function () {
                     $(this).slideUp(500);
+                    $(this).remove();
                 });
             }, 5000);
         }
