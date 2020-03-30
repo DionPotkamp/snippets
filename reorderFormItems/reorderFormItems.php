@@ -8,7 +8,7 @@
  * Inspiration: https://bootsnipp.com/snippets/P2pn5
  *
  */
-require __DIR__.'/reorderFormItemsController.php';
+require __DIR__ . '/reorderFormItemsController.php';
 use controller\reorderFormItemsController as reorderController;
 $reorder = new reorderController();
 

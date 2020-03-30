@@ -1,6 +1,6 @@
 <pre>
 <?php
-require __DIR__.'/reorderFormItemsController.php';
+require __DIR__ . '/reorderFormItemsController.php';
 use controller\reorderFormItemsController as reorderController;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
