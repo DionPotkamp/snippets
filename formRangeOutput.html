@@ -1,0 +1,24 @@
+<html lang="en">
+
+<head>
+    <title>Form Range Output</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Form Range Output">
+    <meta name="keywords" content="HTML,CSS,JS,form,range,output">
+    <meta name="author" content="Dion Potkamp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <form oninput="output.value=parseInt(input.value)">
+        0
+        <input type="range" id="input" name="input" step="1" value="50">
+        100
+        <br>
+        <output name="output" for="input">50</output>
+        <br><br>
+        <input type="submit">
+    </form>
+</body>
+
+</html>

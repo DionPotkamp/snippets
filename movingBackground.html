@@ -1,0 +1,119 @@
+<html lang="en">
+<!-- Confession: not mine. I don't remember the real author -->
+<head>
+    <title>Moving Background</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Moving Background">
+    <meta name="keywords" content="HTML,CSS,JS,moving,background">
+    <meta name="author" content="???">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: linear-gradient(0, #202239, #8595AC);
+        }
+
+        .page {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 600px;
+            z-index: 1;
+            font-family: Roboto, sans-serif;
+            background: #0D0C1E;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .content {
+            text-align: center;
+            padding-top: 118px;
+            color: #CDD4DE;
+        }
+
+        .content h1 {
+            font-weight: 900;
+            font-size: 165px;
+            line-height: 1;
+            margin-bottom: -10px;
+            opacity: 0.6;
+        }
+
+        .content h2 {
+            font-weight: 700;
+            font-size: 34px;
+            margin-bottom: 6px;
+            opacity: 0.9;
+        }
+
+        .content p {
+            font-weight: 300;
+            font-size: 14px;
+            opacity: 0.7;
+            margin-bottom: 140px;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            z-index: -1;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="content">
+            <h1>404</h1>
+            <h2>Page not found</h2>
+            <p>I tried to catch some fog, but i mist</p>
+        </div>
+        <img src="http://www.supah.it/dribbble/008/008.jpg" />
+    </div>
+
+    <script>
+        var lFollowX = 0,
+            lFollowY = 0,
+            x = 0,
+            y = 0,
+            friction = 1 / 20;
+
+        function animate() {
+            x += (lFollowX - x) * friction;
+            y += (lFollowY - y) * friction;
+
+            translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+
+            $('img').css({
+                '-webit-transform': translate,
+                '-moz-transform': translate,
+                'transform': translate
+            });
+
+            window.requestAnimationFrame(animate);
+        }
+
+        $(window).on('mousemove click', function (e) {
+
+            var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+            var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+            lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+            lFollowY = (20 * lMouseY) / 100;
+
+        });
+
+        animate();
+    </script>
+</body>
+
+</html>
