@@ -58,6 +58,7 @@ $reorder = new reorderController();
             $("#sortable").sortable({
                 axis: 'y', // Only allow vertical dragging
                 delay: 200, // Deprecated but it does the job nicely
+                containment: "#sortable", // Keep the sortable within the sortable container
                 helper: widthHelper,
                 stop: updateOrder
             }).disableSelection();
