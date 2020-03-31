@@ -17,6 +17,7 @@ $reorder = new reorderController();
 
 <head>
     <title>Reorder Form Items</title>
+    <link rel="icon" href="favicon.ico" type="image/gif">
     <meta charset="UTF-8">
     <meta name="description" content="Reorder Form Items">
     <meta name="keywords" content="HTML,JS,PHP,reorder,form,items">
