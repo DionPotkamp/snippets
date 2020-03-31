@@ -60,7 +60,8 @@ class reorderFormItemsController {
             $last = $user['last'];
             $sortOrder = $user['sortOrder'];
 
-            $output .= <<<TableRows
+            $output .= /** @lang HTML */
+                <<<TableRows
             <tr class="ui-state-default bg-white">
                 <td class="index">$id</td>
                 <td>$first</td>
@@ -81,8 +82,9 @@ class reorderFormItemsController {
                         name="order[]"
                         id="$sortOrder"
                         value="$sortOrder"
-                        class="form-control"
+                        class="form-control-plaintext"
                         required
+                        readonly
                     >
                 </td>
             </tr>

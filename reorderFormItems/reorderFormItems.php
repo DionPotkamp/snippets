@@ -36,6 +36,7 @@ $reorder = new reorderController();
     
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="jQuery.ui.Touch.Punch.0.2.3.js"></script>
     <script>
         // Keeps the original width of the dragged item
         let widthHelper = function(e, tr) {
