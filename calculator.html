@@ -1,0 +1,188 @@
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <style>
+        .calculator {
+            border: none;
+            border-radius: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            background-color: rgba(108,117,125, .1);
+            transition: background-color .3s ease-out;
+        }
+        .calculator:hover {
+            background-color: rgba(108,117,125, .0);
+        }
+        .calculator-screen {
+            width: 100%;
+            height: 80px;
+            border: none;
+            background-color: #252525;
+            color: #fff;
+            text-align: right;
+            padding-right: 20px;
+            padding-left: 10px;
+            font-size: 4rem;
+        }
+        button {
+            height: 60px;
+            font-size: 2rem!important;
+        }
+        .equal-sign {
+            height: 100%;
+            grid-area: 2 / 4 / 6 / 5;
+            /* With ans */
+            /* grid-area: 2 / 4 / 5 / 5; */
+        }
+        .calculator-keys {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            overflow: hidden;
+        }
+    </style>
+
+    <script type="application/javascript">
+        const Calculator = function () {};
+
+        Calculator.prototype.operand = '';
+        Calculator.prototype.savedOperand = '';
+        Calculator.prototype.operator = '';
+        Calculator.prototype.result = '';
+
+        Calculator.prototype.setOperand = function (operand) {
+            if(this.result !== '' && this.operator === '') return; // Like this you can calculate with the answer
+            if(this.operand.length >= 5) return; // Like this it stays ib frame
+
+            this.operand += operand;
+
+            // Only round the output, like that the calculation will be precise
+            if (typeof this.savedOperand === 'number' && this.savedOperand.toString().length >= 10) {
+                savedOperand = Math.round(this.savedOperand * 100) / 100;
+            } else {
+                savedOperand = this.savedOperand;
+            }
+            document.getElementById('output').value = savedOperand + this.operator + this.operand;
+        };
+
+        Calculator.prototype.setOperator = function (operator) {
+            if(this.operator !== '') return;
+            if (this.result === '') {
+                // Placeholder is zero, so if nothing is entered use zero
+                this.savedOperand = (this.operand === ''? 0 : this.operand );
+            } else {
+                this.savedOperand = this.result;
+                this.result = '';
+            }
+
+            this.operator = operator;
+            this.operand = '';
+            // Round numbers, only 10 characters fit on the screen
+            if (typeof this.savedOperand === 'number' && this.savedOperand.toString().length >= 10) {
+                savedOperand = Math.round(this.savedOperand * 100) / 100;
+            } else {
+                savedOperand = this.savedOperand;
+            }
+            document.getElementById('output').value = savedOperand + this.operator + this.operand;
+        };
+
+        Calculator.prototype.calculate = function () {
+            // Otherwise it will return undefined if nothing is entered
+            if(this.operand === '' || this.operator === '') return;
+
+            // eval can calculate a string in this case
+            let result = eval(this.savedOperand + this.operator + this.operand);
+            this.result = result;
+
+            // Round numbers, only 10 characters fit on the screen
+            if (typeof result === 'number' && result.toString().length >= 10) {
+                result = Math.round(result * 100) / 100;
+            }
+
+            document.getElementById('output').value = result;
+
+            // Clear these variabeles. Otherwise you cannot calculate with the answer
+            this.operand = '';
+            this.savedOperand = '';
+            this.operator = '';
+        };
+        // Calculator.prototype.getAnswer = function () {
+        // };
+
+        Calculator.prototype.reset = function () {
+            this.operand = '';
+            this.savedOperand = '';
+            this.operator = '';
+            this.result = '';
+
+            document.getElementById('output').value = '';
+        };
+
+        let calculator = new Calculator();
+
+    </script>
+
+    <title>A nice little Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="A nice little Calculator">
+    <meta name="keywords" content="HTML,JS,PHP,calculator">
+    <meta name="author" content="Dion Potkamp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+
+<body class="bg-dark">
+
+    <div class="calculator card shadow-lg">
+
+        <label for="output" class="sr-only">Output screen</label>
+        <input type="text" id="output" class="calculator-screen shadow z-depth-1" value="" placeholder="0" disabled />
+
+        <div class="calculator-keys" onclick="console.log(calculator);">
+
+            <button type="button" class="btn btn-info shadow" onclick="calculator.setOperator('+');">+</button>
+            <button type="button" class="btn btn-info shadow" onclick="calculator.setOperator('-');">-</button>
+            <button type="button" class="btn btn-info shadow" onclick="calculator.setOperator('*');">&times;</button>
+            <button type="button" class="btn btn-info shadow" onclick="calculator.setOperator('/');">&divide;</button>
+
+            <button type="button" class="btn btn-secondary shadow" onclick="calculator.setOperand('7');">7</button>
+            <button type="button" class="btn btn-secondary shadow" onclick="calculator.setOperand('8');">8</button>
+            <button type="button" class="btn btn-secondary shadow" onclick="calculator.setOperand('9');">9</button>
+
+
+            <button type="button" class="btn btn-secondary shadow" onclick="calculator.setOperand('4');">4</button>
+            <button type="button" class="btn btn-secondary shadow" onclick="calculator.setOperand('5');">5</button>
+            <button type="button" class="btn btn-secondary shadow" onclick="calculator.setOperand('6');">6</button>
+
+
+            <button type="button" class="btn btn-secondary shadow" onclick="calculator.setOperand('1');">1</button>
+            <button type="button" class="btn btn-secondary shadow" onclick="calculator.setOperand('2');">2</button>
+            <button type="button" class="btn btn-secondary shadow" onclick="calculator.setOperand('3');">3</button>
+
+
+            <button type="button" class="btn btn-secondary shadow" onclick="calculator.setOperand('0');">0</button>
+            <button type="button" class="btn btn-secondary shadow" onclick="calculator.setOperand('.');">.</button>
+            <button type="button" class="btn btn-danger shadow" onclick="calculator.reset();">AC</button>
+            <!--button type="button" class="btn btn-secondary shadow" onclick="calculator.getAnswer();">ans</button-->
+
+            <button type="button" class="equal-sign btn btn-success shadow" onclick="calculator.calculate();">=</button>
+
+        </div>
+    </div>
+
+    <span class="scripts">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </span>
+</body>
+
+</html>
