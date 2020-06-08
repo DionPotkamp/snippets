@@ -46,7 +46,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `first`, `last`, `sortOrder`) VALUES
 (1, 'Dion', 'Potkamp', 1),
 (2, 'Daan', 'de Haan', 2),
-(4, 'Berbrand', 'de Boer', 3);
+(3, 'Berbrand', 'de Boer', 3);
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -67,7 +67,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT voor een tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
