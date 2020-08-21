@@ -17,22 +17,24 @@
 
         <form method="post" action="generateColorFile.php">
             <div class="form-group">
-                <label for="lang">Choose language</label>
-                <select class="form-control" id="lang" name="lang">
+                <label for="language">Choose language</label>
+                <select class="form-control" id="language" name="language">
                     <option value="php">Php</option>
                     <option value="js">JavaScript</option>
-                    <option value="css">CSS//class\\</option>
+                    <option value="css">CSS</option>
                     <option value="python">Python</option>
                     <option value="">//Java\\</option>
                     <option value="">//c/++/#\\</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="arg">Choose argument (currently only for python)</label>
-                <select class="form-control" id="arg" name="arg">
+                <label for="argument">Choose argument</label>
+                <select class="form-control" id="argument" name="argument">
                     <!-- add and remove options thru js -->
-                    <option value="dictionairy">dictionairy</option>
-                    <option value="variables">variables</option>
+                    <option value="dictionairy">dictionairy(python)</option>
+                    <option value="variables">variables(php, js, css, python)</option>
+                    <option value="object">object(js, php)</option>
+                    <option value="class">class(css)</option>
                 </select>
             </div>
             <div class="form-group form-check">
