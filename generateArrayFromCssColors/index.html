@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Color file generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-1">Hello, world!</h1>
+        <p>Generate a file containing all CSS named colors compiled with name, rgb and hex.</p>
+
+        <form method="post" action="generateColorFile.php">
+            <div class="form-group">
+                <label for="lang">Choose language</label>
+                <select class="form-control" id="lang" name="lang">
+                    <option value="php">Php</option>
+                    <option value="js">JavaScript</option>
+                    <option value="css">CSS//class\\</option>
+                    <option value="python">Python</option>
+                    <option value="">//Java\\</option>
+                    <option value="">//c/++/#\\</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="arg">Choose argument (currently only for python)</label>
+                <select class="form-control" id="arg" name="arg">
+                    <!-- add and remove options thru js -->
+                    <option value="dictionairy">dictionairy</option>
+                    <option value="variables">variables</option>
+                </select>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="dump" name="dump">
+                <label class="form-check-label" for="dump">Dump the color array</label>
+            </div>
+            <input type="submit" id="submit" value="submit" name="submit" class="btn btn-primary">
+        </form>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
