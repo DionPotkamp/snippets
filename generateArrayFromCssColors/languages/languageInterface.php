@@ -1,9 +1,7 @@
 <?php
 
 interface languageInterface {
-    public function __construct($colorsArray, $argument);
-
-    public function generateContents();
+    public function generateContents($colorsArray, $argument);
     public function getContents();
 
     public function getAllowedArguments();

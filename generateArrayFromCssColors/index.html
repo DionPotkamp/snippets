@@ -12,37 +12,32 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="display-1">Hello, world!</h1>
+        <h1 class="display-1">Hello, y'all!</h1>
         <p>Generate a file containing all CSS named colors compiled with name, rgb and hex.</p>
 
-        <form method="post" action="generateColorFile.php">
-            <div class="form-group">
-                <label for="language">Choose language</label>
-                <select class="form-control" id="language" name="language">
-                    <option value="php">Php</option>
-                    <option value="js">JavaScript</option>
-                    <option value="css">CSS</option>
-                    <option value="python">Python</option>
-                    <option value="">//Java\\</option>
-                    <option value="">//c/++/#\\</option>
-                </select>
+        <form method="post" action="generateColorFile.php" id="generateForm">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group" id="languageForm">
+                        <label for="language">Choose language</label>
+                        <select required class="form-control" id="language" name="language"></select>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group" id="argumentForm">
+                        <label for="argument">Choose argument</label>
+                        <select required class="form-control" id="argument" name="argument"></select>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="argument">Choose argument</label>
-                <select class="form-control" id="argument" name="argument">
-                    <!-- add and remove options thru js -->
-                    <option value="dictionairy">dictionairy(python)</option>
-                    <option value="variables">variables(php, js, css, python)</option>
-                    <option value="object">object(js, php)</option>
-                    <option value="class">class(css)</option>
-                </select>
-            </div>
+            
             <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="dump" name="dump">
                 <label class="form-check-label" for="dump">Dump the color array</label>
             </div>
             <input type="submit" id="submit" value="submit" name="submit" class="btn btn-primary">
         </form>
+        <p id="message"></p>
     </div>
 
     <!-- Optional JavaScript -->
@@ -50,5 +45,55 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $('#argumentForm').fadeOut(0);
+        let languageDropdown = $('#language');
+        languageDropdown.empty();
+        languageDropdown.append('<option selected="true" disabled>Choose language</option>');
+        languageDropdown.prop('selectedIndex', 0);
+
+        const url = 'apiLanguage.php';
+
+        // Populate dropdown with list of languages
+        $.getJSON(url, function (data) {
+            $.each(data, function (key, lang) {
+                let attr = lang;
+                let text = lang.charAt(0).toUpperCase() + lang.slice(1);
+                languageDropdown.append($('<option></option>').attr('value', attr).text(text));
+            })
+        });
+
+        languageDropdown.click(function(event) {
+            let selectedLanguage = $(this).children("option:selected").val();
+
+            let argumentDropdown = $('#argument');
+            argumentDropdown.empty();
+            argumentDropdown.append('<option disabled>Choose format</option>');
+            argumentDropdown.prop('selectedIndex', 0);
+
+            // Populate dropdown with list of available arguments
+            let argsUrl = url + '?lang=' + selectedLanguage;
+
+            $.getJSON(argsUrl, function (data) {
+                $.each(data, function (key, arg) {
+                    let attr = arg;
+                    let text = arg.charAt(0).toUpperCase() + arg.slice(1);
+                    argumentDropdown.append($('<option></option>').attr('value', attr).text(text));
+                })
+                $('#argumentForm').fadeIn("slow");
+            });
+            
+        });
+        $("#submit").click(function(e){
+            e.preventDefault();
+            let data = $('#generateForm').serialize();
+            console.log(data);
+            $.post('generateColorFile.php', data, function(data, status) {
+                $("#message").text(data);
+                console.log(data, status);
+            });
+        });
+    </script>
 </body>
 </html>

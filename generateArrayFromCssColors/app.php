@@ -9,15 +9,12 @@ class app {
     private $argument;
     private $savePath;
 
-    private $dumpResult;
-
-    public function __construct($url, $post, $dumpResult = false, $savePath = 'generated/Color') {
+    public function __construct($url, $post, $savePath = 'generated/Color') {
         $this->url = $url;
 
         $this->language = $post['language'];
         $this->argument = $post['argument'];
 
-        $this->dumpResult = $dumpResult;
         $this->savePath = $savePath;
 
         $this->setup();
@@ -31,12 +28,26 @@ class app {
 
         $this->colorsArray = $this->generateColorArray($urlContents);
 
-        require_once 'languages/'.$this->language.'.php';
+        if(!$this->validLanguage($this->language)) {
+            echo 'Not a valid language, <a href="index.html">Back</a>';
+            exit();
+        }
 
-        $languageInstance = new $this->language($this->colorsArray, $this->argument);
+        try {
+            require_once sprintf('languages/%s.php', $this->language);
+            $languageInstance = new $this->language();
+        } catch (\Throwable $th) {
+            echo 'Could not instanciate language';
+            exit();
+        }
+
+        try {
+            $languageInstance->generateContents($this->colorsArray, $this->argument);
+        } catch (\Throwable $th) {
+            exit();
+        }
+
         $this->languageInstance = $languageInstance;
-
-        $languageInstance->generateContents();
         $this->colorsFileContents = $languageInstance->getContents();
 
         $this->generateColorFile();
@@ -80,6 +91,16 @@ class app {
         }
         
         return $tdText;
+    }
+
+    public function validLanguage($language) {
+        $languagesDir = array_diff(scandir(__DIR__.'/languages'), array('..', '.', '.htaccess', 'language.php', 'languageInterface.php'));
+        $languages = array();
+
+        foreach ($languagesDir as $languageClass) 
+            array_push($languages, str_replace('.php', '', $languageClass));
+        
+        return in_array($language, $languages);
     }
 
     public function generateColorFile() {

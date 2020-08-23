@@ -29,9 +29,12 @@ class python extends language {
         'extension' => '.py'
     ];
 
-    public function generateContents() {
-        $this->checkArgument($this->allowedArguments);
-        parent::generateContents();
+    public function generateContents($colorsArray, $argument) {
+        $this->colorsArray = $colorsArray;
+        $this->argument = $argument;
+        $this->checkArgument($this->allowedArguments, $argument);
+        $contents = $this->$argument($colorsArray);
+        $this->setContents($contents);
     }
 
     protected function dictionairy($colorsArray) {
@@ -49,6 +52,10 @@ class python extends language {
         }
 
         return $result;
+    }
+
+    public function getAllowedArguments() {
+        return $this->allowedArguments;
     }
 
     public function getExtension() {

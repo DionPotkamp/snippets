@@ -31,15 +31,11 @@ class language implements languageInterface {
 
     private $contents;
 
-    public function __construct($colorsArray, $argument) {
+    public function generateContents($colorsArray, $argument) {
         $this->colorsArray = $colorsArray;
         $this->argument = $argument;
-    }
-
-    public function generateContents() {
-        $colorsArray = $this->getColorsArray();
-        $arg = $this->getArgument();
-        $contents = $this->$arg($colorsArray);
+        
+        $contents = $argument($colorsArray);
         $this->setContents($contents);
     }
 
@@ -63,9 +59,9 @@ class language implements languageInterface {
         return $this->argument;
     }
 
-    protected function checkArgument($allowedArguments) {
-        if (!in_array($this->getArgument(), $allowedArguments))
-            throw new Exception("Not a valid argument", 1);
+    protected function checkArgument($allowedArguments, $argument) {
+        if (!in_array($argument, $allowedArguments))
+            echo "Not a valid argument, <a href=\"index.php\">back</a>";
     }
 
     public function getExtension() {}

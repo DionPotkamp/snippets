@@ -20,15 +20,18 @@ class php extends language {
                 'hex' => '',
                 'rgb' => '',
             ],
-            'prefix' => '<?php $colors = ',
+            'prefix' => '<?php'."\n".'$colors = ',
             'suffix' => ';',
         ],
         'extension' => '.php'
     ];
 
-    public function generateContents() {
-        $this->checkArgument($this->allowedArguments);
-        parent::generateContents();
+    public function generateContents($colorsArray, $argument) {
+        $this->colorsArray = $colorsArray;
+        $this->argument = $argument;
+        $this->checkArgument($this->allowedArguments, $argument);
+        $contents = $this->$argument($colorsArray);
+        $this->setContents($contents);
     }
 
     protected function object($colorsArray) {
@@ -39,7 +42,7 @@ class php extends language {
     }
     
     protected function variables($colorsArray) {
-        $prefix = $this->syntax['object']['prefix'];
+        $prefix = $this->syntax['variables']['prefix'];
 
         $result = $prefix;
         
@@ -52,6 +55,10 @@ class php extends language {
         }
 
         return $result;
+    }
+
+    public function getAllowedArguments() {
+        return $this->allowedArguments;
     }
 
     public function getExtension() {
