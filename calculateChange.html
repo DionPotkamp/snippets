@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <title>Calculate Change</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Calculate and Save Change">
+    <meta name="keywords" content="calculate,save,change,difference">
+    <meta name="author" content="Dion Potkamp">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1 class="display-4">Peaks!?</h1>
+        <p class="lead">This is a simple page where you can calculate your savings like Peaks does. It doesn't cost you anything but you have to do it manually...</p>
+        <hr class="my-4">
+        <button class="btn btn-danger mb-2" onclick="reset()">reset</button>
+    </div>
+    <div class="container">
+        <div class="form-row d-flex justify-content-center">
+            <span id="container"></span>
+            <div class="col-auto align-self-start" id="addFieldBtn">
+                <span class="row">
+                    <button class="btn btn-primary mb-2" onclick="addField()" title="Press Enter!">Add Field</button>
+                </span>
+                <span class="row btn pl-0">
+                    Total: €<span id="change">0.00</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let storageKey = 'calculateChangeFormData';
+        let container = document.getElementById('container');
+        let inputString = `
+            <div class="col-auto">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text">€</label>
+                    </div>
+                    <input type="number" name="amount" class="form-control" placeholder="Amount">
+                </div>
+            </div>`;
+        let change = document.getElementById('change');
+
+        function addField(value = null) {
+            let inputDiv = htmlToElement(inputString);
+            inputDiv.addEventListener('change', updateChange);
+        
+            let input = inputDiv.querySelector('input');
+            input.value = value;
+            input.addEventListener("keyup", function(event) {
+                // Number 13 is the Enter-key on the keyboard
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    addField();
+                }
+            });
+
+            container.prepend(inputDiv);
+            input.select();
+
+            updateChange();
+        }
+
+        function updateChange() {
+            let inputs = document.getElementsByName('amount');
+            let total = 0;
+            let data = [];
+
+            inputs.forEach(function (item, index) {
+                let value = item.value;
+                total += getDiff(value);
+                if (value !== "") { data.push(value); }
+            });
+
+            localStorage.setItem(storageKey , JSON.stringify(data));
+            change.innerHTML = total.toFixed(2);
+        }
+
+        function restore() {
+            let json = JSON.parse(localStorage.getItem(storageKey));
+            if (json === null) { return; }
+            if (Object.keys(json).length === 0) { return; }
+
+            if (!confirm("You have stored data, do you want to load it?")) {
+                localStorage.setItem(storageKey, {});
+                return;
+            }
+            
+            let data = Array.from(
+                json, x => x
+            ).reverse();
+            
+            for (item in data) {
+                let value = data[item];
+                if (value === "") { continue; }; 
+                addField(value);
+            }
+        }
+
+        function reset() {
+            if (confirm("Want to clear your data?")) {
+                localStorage.setItem(storageKey, [])
+                container.innerHTML = '';
+                addField();
+            }
+        }
+
+        function htmlToElement(html) {
+            let template = document.createElement('template');
+            html = html.trim();
+            template.innerHTML = html;
+            return template.content.firstChild;
+        }
+
+        function getDiff(amount) {
+            amount = Number(amount);
+            return Math.ceil(amount) - amount;
+        }
+
+        restore();
+        addField();
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
