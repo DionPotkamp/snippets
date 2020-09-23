@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Calculate and Save Change">
-    <meta name="keywords" content="calculate,save,change,difference">
+    <meta name="keywords" content="calculate,save,change,difference,peaks">
     <meta name="author" content="Dion Potkamp">
 
     <!-- Bootstrap CSS -->
@@ -48,11 +48,18 @@
                 </div>
             </div>`;
         let change = document.getElementById('change');
-
+        
+        // Add the amount input field
         function addField(value = null) {
+            // Check if the last one is empty, ignore if so
+            let lastInput = container.querySelector('input');
+            if (lastInput !== null && lastInput.value === "") { return; }
+
+            // Create the div with the input element
             let inputDiv = htmlToElement(inputString);
             inputDiv.addEventListener('change', updateChange);
-        
+            
+            // Setup the input
             let input = inputDiv.querySelector('input');
             input.value = value;
             input.addEventListener("keyup", function(event) {
@@ -63,41 +70,51 @@
                 }
             });
 
+            // Add the div to the container and select it
             container.prepend(inputDiv);
             input.select();
 
             updateChange();
         }
 
+        // Function to process the change
         function updateChange() {
             let inputs = document.getElementsByName('amount');
             let total = 0;
             let data = [];
 
+            // Loop over all inputs, get the values, calculate the diff and push to data
             inputs.forEach(function (item, index) {
                 let value = item.value;
                 total += getDiff(value);
                 if (value !== "") { data.push(value); }
             });
 
+            // Store in local storage and update html
             localStorage.setItem(storageKey , JSON.stringify(data));
             change.innerHTML = total.toFixed(2);
         }
 
+        // Function to restore previouse inputs from localstorage
         function restore() {
+            // Get the items from local storage
             let json = JSON.parse(localStorage.getItem(storageKey));
+            // Check if there is someting stored
             if (json === null) { return; }
             if (Object.keys(json).length === 0) { return; }
 
+            // Ask for confimation
             if (!confirm("You have stored data, do you want to load it?")) {
                 localStorage.setItem(storageKey, {});
                 return;
             }
             
+            // Cast object to array and flip so that the inputs are in the original order
             let data = Array.from(
                 json, x => x
             ).reverse();
             
+            // Foreach item in the localstorage add a field
             for (item in data) {
                 let value = data[item];
                 if (value === "") { continue; }; 
@@ -105,14 +122,17 @@
             }
         }
 
+        // Function to clear the local storage
         function reset() {
             if (confirm("Want to clear your data?")) {
                 localStorage.setItem(storageKey, [])
                 container.innerHTML = '';
+                // Total change is updated automatically in addField()
                 addField();
             }
         }
 
+        // Function to create an element from a string
         function htmlToElement(html) {
             let template = document.createElement('template');
             html = html.trim();
@@ -120,6 +140,7 @@
             return template.content.firstChild;
         }
 
+        // Function that calculates the difference
         function getDiff(amount) {
             amount = Number(amount);
             return Math.ceil(amount) - amount;
