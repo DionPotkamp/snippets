@@ -1,0 +1,2540 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+<script>
+let json = [
+  [
+    {
+      "vraag": {
+        "id": 17614,
+        "tekst": "<p class='opdracht'>Is het onderstreepte woord goed of fout gespeld?</p><br><p class='vraag'>De doodgewone <u>paardenbloem</u> schijnt een geneeskrachtige werking te hebben.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 36104,
+          "tekst": "goed",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36105,
+          "tekst": "fout",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 1470,
+        "tekst": "<p class=\"opdracht\">Welk woord is juist gespeld?</p><br><p class=\"vraag\">Uiteindelijk kwam de oud-president ... uit voor zijn affaire met de stagiaire, nadat hij die eerder ontkend had.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 2671,
+          "tekst": "opelijk",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 2672,
+          "tekst": "openlijk",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 17872,
+        "tekst": "<p class='opdracht'>Is het onderstreepte woord goed of fout gespeld?</p><br><p class='vraag'>De actiegroep, die bestaat uit eerste- en tweedejaarsstudenten, houdt het <u>universiteitgebouw</u> al een week bezet.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 36749,
+          "tekst": "goed",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36750,
+          "tekst": "fout",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 29077,
+        "tekst": "<p class=\"opdracht\">Is het onderstreepte woord goed of fout gespeld?</p><br><p class=\"vraag\">De tentoonstelling in de oude bioscoop werd geopend door de <u>vicepresident</u> van de club.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 59960,
+          "tekst": "goed",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 59961,
+          "tekst": "fout",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 28436,
+        "tekst": "<p class='opdracht'>Is het onderstreepte woord goed of fout gespeld?</p><br><p class='vraag'>Hij vertelt met veel passie over een <u>bakker-patissier</u> die bekendstond om zijn spectaculaire taartjes.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 58620,
+          "tekst": "goed",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 58621,
+          "tekst": "fout",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 28407,
+        "tekst": "<p class=\"opdracht\">Is het onderstreepte deel goed of fout gespeld?</p><br><p class=\"vraag\">De trainer is op <u>non actief</u> gezet vanwege tegenvallende prestaties.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 58562,
+          "tekst": "goed",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 58563,
+          "tekst": "fout",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 28412,
+        "tekst": "<p class=\"opdracht\">Is het onderstreepte woord goed of fout gespeld?</p><br><p class=\"vraag\">De <u>EHBO'ers</u> voelen zich miskend door de minister van Binnenlandse Zaken. </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 58572,
+          "tekst": "goed",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 58573,
+          "tekst": "fout",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 16777,
+        "tekst": "<p class=\"opdracht\">Is het onderstreepte woord goed of fout gespeld?</p><br><p class=\"vraag\">Zijn oeuvre ligt tegen <u>science-fiction</u> aan, maar blijft wel geloofwaardig.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 32632,
+          "tekst": "goed",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 32633,
+          "tekst": "fout",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 16781,
+        "tekst": "<p class=\"opdracht\">Is het onderstreepte woord goed of fout gespeld?</p><br><p class=\"vraag\">Het is een van die <u>huis, tuin en keukenweetjes</u> die je leert van je ouders, of tijdens je eerste jaren als student.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 32640,
+          "tekst": "goed",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 32641,
+          "tekst": "fout",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 17624,
+        "tekst": "<p class='opdracht'>Is het onderstreepte woord goed of fout gespeld?</p><br><p class='vraag'>De oprichter en bestuursvoorzitter van Twitter schenkt <u>een vierde</u> van zijn aandelen aan de medewerkers van zijn bedrijf.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 36126,
+          "tekst": "goed",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36127,
+          "tekst": "fout",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 13029,
+        "tekst": "<p class='opdracht'>Is het onderstreepte deel, gelet op het gebruik van hoofdletters, goed of fout gespeld?</p><br><p class='vraag'>Ga je vanavond nog bij <u>Jeffrey Van Groezen</u> langs? </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 26512,
+          "tekst": "goed",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 26513,
+          "tekst": "fout",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 15829,
+        "tekst": "<p class='opdracht'>Is het onderstreepte woord, gelet op het gebruik van hoofdletters, goed of fout gespeld?</p><br><p class='vraag'>In het meest <u>zuidelijke</u> deel van Nederland schijnt de zon, maar in de rest van het land vallen er buien. </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 31042,
+          "tekst": "goed",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 31043,
+          "tekst": "fout",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 19752,
+        "tekst": "<p class='opdracht'>Is het onderstreepte woord, gelet op het gebruik van hoofdletters, goed of fout gespeld?</p><br><p class='vraag'>In de <u>Herfst</u> wordt het weer vroeger donker.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 40704,
+          "tekst": "goed",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 40705,
+          "tekst": "fout",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 8025,
+        "tekst": "<p class='opdracht'>Is het onderstreepte deel, gelet op het gebruik van hoofdletters, goed of fout gespeld?</p><br><p class='vraag'>Het dagblad <u>de volkskrant</u> richt zich sinds de jaren zestig op hogeropgeleide lezers. </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 16315,
+          "tekst": "goed",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 16316,
+          "tekst": "fout",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 11665,
+        "tekst": "<p class='opdracht'>Is het onderstreepte woord, gelet op het gebruik van hoofdletters, goed of fout gespeld?</p><br><p class='vraag'>Op de van bovenaf genomen foto's van het Amazonegebied staan enkele <u>Indianen</u> van een stam die met rust gelaten wil worden.  </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 23943,
+          "tekst": "goed",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 23944,
+          "tekst": "fout",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 13208,
+        "tekst": "<p class='opdracht'>Is het onderstreepte deel, gelet op het gebruik van hoofdletters, goed of fout gespeld?</p><br><p class='vraag'>Toen ze aan een eetstoornis leed, dronk ze tijdens het uitgaan wodka met <u>spa rood</u> en limoen, want daarin zitten weinig suikers. </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 26890,
+          "tekst": "goed",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 26891,
+          "tekst": "fout",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 17796,
+        "tekst": "<p class=\"opdracht\">Is het onderstreepte woord, gelet op klinkerbotsing, goed of fout gespeld?</p><br><p class=\"vraag\">De man stierf woensdag aan de gevolgen van een acute <u>astma-aanval</u>.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 36556,
+          "tekst": "goed",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36557,
+          "tekst": "fout",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 31432,
+        "tekst": "<p class=\"opdracht\">Is de onderstreepte afkorting goed of fout gespeld? </p><br><p class=\"vraag\">Hij deed mee aan de Marathon des Sables, een loopwedstrijd van 257 <u>km</u> door de Marokkaanse Sahara.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 64868,
+          "tekst": "goed",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 64869,
+          "tekst": "fout",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 29305,
+        "tekst": "<p class=\"opdracht\">Is het onderstreepte woord goed of fout gespeld?</p><br><p class=\"vraag\">In de supermarkt probeer ik een keuze te maken uit het uitgebreide aanbod aan <u>spray's</u>.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 60397,
+          "tekst": "goed",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 60398,
+          "tekst": "fout",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 15847,
+        "tekst": "<p class=\"opdracht\">Is het onderstreepte woord goed of fout gespeld?</p><br><p class=\"vraag\"><u>Annes</u> vader kruiste kersen met komkommers om zo een 'kerskomkommer' te kweken.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 31080,
+          "tekst": "goed",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 31081,
+          "tekst": "fout",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 21603,
+        "tekst": "<p class=\"opdracht\">Schrijf de verkleinvorm van het zelfstandig naamwoord tussen haakjes. </p><br><p class=\"vraag\">De auto van de bovenbuurvrouw leek wel een [hier] (botsauto) met al die deuken.</p>",
+        "id_vraag_type": 1,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 44167,
+          "tekst": "botsautootje",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 17808,
+        "tekst": "<p class='opdracht'>Is het onderstreepte woord, gelet op het gebruik van woordtekens, goed of fout gespeld?</p><br><p class='vraag'>Ze vermaakten zich in de sneeuw met skiën en <u>sleën</u>.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 36580,
+          "tekst": "goed",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36581,
+          "tekst": "fout",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 18146,
+        "tekst": "<p class='opdracht'>Is het onderstreepte woord, gelet op het gebruik van woordtekens, goed of fout gespeld?</p><br><p class='vraag'>Als iemand over een bepaald schilderij, een <u>filmscene</u> of een muziekstuk schrijft, zou je die met een druk op een toegevoegde link kunnen bekijken of beluisteren.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 37436,
+          "tekst": "goed",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 37437,
+          "tekst": "fout",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 1489,
+        "tekst": "<p class=\"opdracht\">Is het onderstreepte woord goed of fout gespeld?</p><br><p class=\"vraag\">In Hongkong kan de temperatuur <u>'s zomers</u> flink oplopen, terwijl het er in de winter niet kouder wordt dan 10 graden - boven nul.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 2709,
+          "tekst": "goed",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 2710,
+          "tekst": "fout",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 17789,
+        "tekst": "<p class=\"opdracht\">Is het onderstreepte woord goed of fout gespeld?</p><br><p class=\"vraag\">Het aantal gemelde gevallen van <u>euthanasie</u> is het afgelopen jaar opnieuw gestegen.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 36542,
+          "tekst": "goed",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36543,
+          "tekst": "fout",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 15858,
+        "tekst": "<p class=\"opdracht\">Is de punt in de volgende zin goed gebruikt?</p><br><p class=\"vraag\">De ijverige leerling vroeg: \"Klopt het dat een deel van Nederland ooit verscholen lag onder een dik ijspakket?\".</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 31103,
+          "tekst": "ja",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 31104,
+          "tekst": "nee",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 32085,
+        "tekst": "<p class='opdracht'>Is de volgende zin, gelet op het gebruik van het vraagteken, goed of fout?</p><br><p class='vraag'>Het was een flauwe smoes dat je gisteren niet meeging naar het park, omdat je moest leren, want ik heb gehoord dat je wel met Karim naar de bioscoop bent geweest? </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 66561,
+          "tekst": "goed",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 66562,
+          "tekst": "fout",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 21617,
+        "tekst": "<p class=\"opdracht\">Is de komma in de volgende zin goed gebruikt?</p><br><p class=\"vraag\">In de veronderstelling dat het een druif is, bijt ik bijna mijn voortanden stuk op de pit van een pruim.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 44187,
+          "tekst": "ja",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 44188,
+          "tekst": "nee",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 17810,
+        "tekst": "<p class='opdracht'>Is de dubbele punt in de volgende zin goed gebruikt?</p><br><p class='vraag'>De sprintster heeft de volgende podiumplaatsen op het WK behaald: zilver op de 100 en goud op de 200 meter.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 36584,
+          "tekst": "ja",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36585,
+          "tekst": "nee",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 32947,
+        "tekst": "<p class='opdracht'>Is de volgende zin, gelet op het gebruik van de puntkomma, goed of fout?</p><br><p class='vraag'>Nu eens had ze geen zin, dan weer geen tijd; telkens had de actrice een excuus om niet mee te werken aan een biografie. </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 68673,
+          "tekst": "goed",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 68674,
+          "tekst": "fout",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 18372,
+        "tekst": "<p class='opdracht'>Zijn de aanhalingstekens in de volgende zin goed gebruikt?</p><br><p class='vraag'>De fans die in de Italiaanse hoofdstad zijn geweest, noemen de berichten over de chaos overdreven.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 37885,
+          "tekst": "ja",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 37886,
+          "tekst": "nee",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 19310,
+        "tekst": "<p class=\"opdracht\">Is de volgende zin, gelet op het gebruik van de gedachtestreepjes, goed of fout?</p><br><p class=\"vraag\">Als je wilt beleggen - hoeft niet natuurlijk - koop dan gewoon aandelen of obligaties: simpele, eendimensionale financiële producten.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 39640,
+          "tekst": "goed",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 39641,
+          "tekst": "fout",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 18262,
+        "tekst": "<p class='opdracht'>Hoe is de volgende zin opgebouwd?</p><br><p class='vraag'>Ik geef de voorkeur aan een gesprek, omdat je niet kunt knipogen in een e-mail.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 37625,
+          "tekst": "bijzin, hoofdzin",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 37626,
+          "tekst": "hoofdzin, bijzin",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 82439,
+          "tekst": "hoofdzin, hoofdzin",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 9182,
+        "tekst": "<p class='opdracht'>Is de volgende zin enkelvoudig of samengesteld?</p><br><p class='vraag'>We gaan drie weken naar Aruba omdat mijn zus daar trouwt. </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 18927,
+          "tekst": "enkelvoudig",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 18928,
+          "tekst": "samengesteld",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 7964,
+        "tekst": "<p class='opdracht'>Wat geldt voor de onderstreepte woorden in de volgende zin?</p><br><p class='vraag'>Deze week vroeg de hypotheekverstrekker mij <u>of ik een pensioen had opgebouwd</u>.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 16171,
+          "tekst": "Dit is een zinsdeel.",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 16172,
+          "tekst": "Dit is GEEN zinsdeel.",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 18375,
+        "tekst": "<p class='opdracht'>Wat zijn de persoonsvormen in de volgende zin?</p><br><p class='vraag'>Hoewel de regering de stap goedkeurde, was er breed verzet van milieuorganisaties tegen de winning van olie in het poolgebied.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 37891,
+          "tekst": "goedkeurde, was",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 37892,
+          "tekst": "was, verzet",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 37893,
+          "tekst": "goedkeurde, verzet",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 21654,
+        "tekst": "<p class=\"opdracht\">Wat is het onderwerp in de volgende zin?</p><br><p class=\"vraag\">De managers van het succesvolle bedrijf bleken een neus te hebben voor nieuwe technologieën. </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 44274,
+          "tekst": "De managers",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 44275,
+          "tekst": "De managers van het succesvolle bedrijf",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 44276,
+          "tekst": "een neus",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 15880,
+        "tekst": "<p class='opdracht'>Wat is het werkwoordelijk gezegde in de volgende zin?</p><br><p class='vraag'>De media hebben hun verbazing geuit. </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 31156,
+          "tekst": "hebben",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 31157,
+          "tekst": "geuit",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 31158,
+          "tekst": "hebben geuit",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 17703,
+        "tekst": "<p class='opdracht'>Wat is het naamwoordelijk gezegde in de hoofdzin?</p><br><p class='vraag'>Het experiment is zo'n succes gebleken dat het per direct definitief wordt ingevoerd.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 36320,
+          "tekst": "is gebleken",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36321,
+          "tekst": "is zo'n succes gebleken",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36322,
+          "tekst": "wordt ingevoerd",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 17704,
+        "tekst": "<p class='opdracht'>Wat is het lijdend voorwerp in de bijzin?</p><br><p class='vraag'>De zwarte rat verstopt zich vooral in pakhuizen en silo's, waardoor de stadsmens weinig last heeft van het knaagdier. </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 36323,
+          "tekst": "in pakhuizen en silo's",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36324,
+          "tekst": "de stadsmens",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36325,
+          "tekst": "weinig last",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 5467,
+        "tekst": "<p class=\"opdracht\">Wat is het meewerkend voorwerp in de volgende zin?</p><br><p class=\"vraag\">Heb je er al eens over gedacht om hem met zijn allen een reisje naar Londen te geven?</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 11542,
+          "tekst": "hem",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 11543,
+          "tekst": "met zijn allen",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 11544,
+          "tekst": "een reisje naar Londen",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 17706,
+        "tekst": "<p class='opdracht'>Wat is de bijwoordelijke bepaling in de hoofdzin?</p><br><p class='vraag'>Bij een onderzoek naar muzikaliteit is het vermoeden uitgesproken dat parkieten, zeeleeuwen en chimpansees enig maatgevoel hebben. </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 36329,
+          "tekst": "Bij een onderzoek naar muzikaliteit",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36330,
+          "tekst": "het vermoeden",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36331,
+          "tekst": "enig maatgevoel",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 18384,
+        "tekst": "<p class='opdracht'>Hoe heet de onderstreepte bijzin in de volgende zin?</p><br><p class='vraag'>De commissie vreest <u>dat de overname kan leiden tot hogere tarieven, minder keuze en minder innovatieve diensten.</u></p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 37918,
+          "tekst": "onderwerpszin",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 37919,
+          "tekst": "lijdendvoorwerpszin",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 37920,
+          "tekst": "meewerkendvoorwerpszin",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 12745,
+        "tekst": "<p class='opdracht'>Hoe heet de onderstreepte bijzin in de volgende zin?</p><br><p class='vraag'>De huizenmarkt <u>die lange tijd niet rooskleurig was</u>, begint weer aan te trekken.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 25848,
+          "tekst": "bijvoeglijke bijzin",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 25849,
+          "tekst": "lijdendvoorwerpszin",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 25850,
+          "tekst": "meewerkendvoorwerpszin",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 29054,
+        "tekst": "<p class='opdracht'>Is de volgende zin, gelet op de beknopte bijzin, goed of fout?</p><br><p class='vraag'>We hebben ons enorm gehaast. Bij school aangekomen, bleek de les echter helaas niet door te gaan.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 59909,
+          "tekst": "goed",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 59910,
+          "tekst": "fout",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 28490,
+        "tekst": "<p class=\"opdracht\">Wat zijn de lidwoorden in de volgende zin?</p><br><p class=\"vraag\">Er wordt tegenwoordig wel degelijk rekening gehouden met de behoeften van de dieren.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 58769,
+          "tekst": "de, de",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 58770,
+          "tekst": "wel, de, de",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 58771,
+          "tekst": "de, van, de",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 17898,
+        "tekst": "<p class='opdracht'>Wat zijn de voorzetsels in de volgende zin?</p><br><p class='vraag'>Het incident speelde zich af in de voorstad, waar de rellen van tien jaar geleden met de eerste brandende auto's begonnen.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 36807,
+          "tekst": "Het, de, de",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36808,
+          "tekst": "in, van, met",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36809,
+          "tekst": "af, waar, eerste",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 15895,
+        "tekst": "<p class='opdracht'>Wat zijn de werkwoorden in de volgende zin?</p><br><p class='vraag'>Je kunt een verzoek tot teruggave indienen, maar dat wordt zelden goedgekeurd. </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 31201,
+          "tekst": "kunt, wordt, goedgekeurd",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 31202,
+          "tekst": "kunt, wordt",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 31203,
+          "tekst": "kunt, indienen, wordt, goedgekeurd",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 15897,
+        "tekst": "<p class='opdracht'>Wat zijn de zelfstandige naamwoorden in de volgende zin?</p><br><p class='vraag'>Het benoemen van problemen is voor veel leidinggevenden een enorme uitdaging. </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 31207,
+          "tekst": "benoemen, leidinggevenden, uitdaging",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 31208,
+          "tekst": "benoemen, problemen, leidinggevenden, uitdaging",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 31209,
+          "tekst": "problemen, leidinggevenden, uitdaging",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 28449,
+        "tekst": "<p class='opdracht'>Wat zijn de bijvoeglijke naamwoorden in de volgende zin?</p><br><p class='vraag'>Olifanten zijn prachtige dieren, de grootste op onze aarde en de enige die niet kunnen springen.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 58646,
+          "tekst": "grootste, enige",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 58647,
+          "tekst": "prachtige, grootste, enige",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 58648,
+          "tekst": "grootste, onze, niet",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 18390,
+        "tekst": "<p class='opdracht'>Wat zijn de bijwoorden in de volgende zin?</p><br><p class='vraag'>Laatst zag ik op de singel eenden broederlijk eten met de zwarte ratten.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 37936,
+          "tekst": "Laatst, broederlijk",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 37937,
+          "tekst": "singel, eenden, ratten",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 37938,
+          "tekst": "broederlijk, zwarte",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 28521,
+        "tekst": "<p class='opdracht'>Wat zijn de voegwoorden in de volgende zin?</p><br><p class='vraag'>Het is nu droog, dus we kunnen naar buiten gaan, maar haast je, want straks kan het weer gaan regenen.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 58862,
+          "tekst": "dus, maar",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 58863,
+          "tekst": "dus, maar, want",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 58864,
+          "tekst": "maar, want",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 29445,
+        "tekst": "<p class='opdracht'>Wat zijn de persoonlijke voornaamwoorden in de volgende zin?</p><br><p class='vraag'>Je kunt hen niet verwijten dat ze er niet alles aan gedaan hebben om hun gelijk te halen.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 60727,
+          "tekst": "Je, ze, hun",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 60728,
+          "tekst": "Je, ze",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 60729,
+          "tekst": "Je, hen, ze",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 29413,
+        "tekst": "<p class='opdracht'>Wat zijn de bezittelijke voornaamwoorden in de volgende zin?</p><br><p class='vraag'>Als jij in onze vakantie die haag van ons wilt knippen, dan zal ik na de vakantie de jouwe wel doen.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 60631,
+          "tekst": "onze, ons, jouwe",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 60632,
+          "tekst": "onze, ons",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 60633,
+          "tekst": "onze, jouwe",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 17718,
+        "tekst": "<p class='opdracht'>Wat is het aanwijzend voornaamwoord in de volgende zin?</p><br><p class='vraag'>Ik was uitgenodigd voor een diner met oud-collega's, wat me erg gezellig leek, maar helaas was ik die avond al bezet.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 36365,
+          "tekst": "een",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36366,
+          "tekst": "wat",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36367,
+          "tekst": "die",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 18394,
+        "tekst": "<p class='opdracht'>Wat is het betrekkelijk voornaamwoord in de volgende zin?</p><br><p class='vraag'>Werkgevers doen steeds minder aan scholing van hun personeel, wat in deze tijd vaak leidt tot een kwalitatieve achteruitgang.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 37948,
+          "tekst": "hun",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 37949,
+          "tekst": "wat",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 37950,
+          "tekst": "deze",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 9216,
+        "tekst": "<p class=\"opdracht\">Is de volgende zin grammaticaal juist?</p><br><p class=\"vraag\">De snelwegen zijn onbegaanbaar. Doordat het vannacht hevig heeft gesneeuwd. </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 19001,
+          "tekst": "ja",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 19002,
+          "tekst": "nee",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 21676,
+        "tekst": "<p class='opdracht'>Is de volgende zin wat stijl betreft goed of fout?</p><br><p class='vraag'>De jonge moeder gaf haar zoontje een boterham met kaas en haar man geen aandacht. </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 44325,
+          "tekst": "goed",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 44326,
+          "tekst": "fout",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 17723,
+        "tekst": "<p class='opdracht'>Bevat de volgende zin een tangconstructie?</p><br><p class='vraag'>Het was opvallend dat, zonder dat er de minste aanleiding toe was, zijn consumptiepatroon veranderde van een vrijgevige levensgenieter in een gierige vrek.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 36376,
+          "tekst": "ja",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36377,
+          "tekst": "nee",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 5797,
+        "tekst": "<p class='opdracht'>Geef aan of de volgende zin goed of fout is.</p><br><p class='vraag'>Als je nu niet snel naar boven gaat, word je morgen niet op tijd wakker en kom je te laat op school.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 12309,
+          "tekst": "goed",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 12310,
+          "tekst": "fout",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 17906,
+        "tekst": "<p class='opdracht'>Waarnaar verwijst het onderstreepte woord in de volgende zin?</p><br><p class='vraag'>Toezichthouders zijn ongelukkig met de actievere rol van de overheid en vinden dat <u>hun</u> functie wordt 'uitgehold' door de bemoeienis van het ministerie van Financiën. </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 36830,
+          "tekst": "Toezichthouders",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36831,
+          "tekst": "de overheid",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36832,
+          "tekst": "het ministerie van Financiën",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 21697,
+        "tekst": "<p class='opdracht'>Is de volgende zin wat stijl betreft goed of fout?</p><br><p class='vraag'>Zes New Yorkse straatartiesten overwegen juridische acties tegen een fastfoodketen, omdat hun werk zonder toestemming voorkomt in een campagnefilm van de hamburgergigant.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 44367,
+          "tekst": "goed",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 44368,
+          "tekst": "fout",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 7984,
+        "tekst": "<p class=\"opdracht\">Is de volgende zin wat stijl betreft goed of fout?</p><br><p class=\"vraag\">Op het strand aangekomen, bleek de nieuwe strandtent een prachtig uitzicht te hebben op de Scheveningse pier.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 16224,
+          "tekst": "goed",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 16225,
+          "tekst": "fout",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 29061,
+        "tekst": "<p class=\"opdracht\">Is de volgende zin wat stijl betreft goed of fout?</p><br><p class=\"vraag\">Het drankbedrijf besteedt dit jaar 'slechts' 5 miljoen euro aan advertenties en de rest van de verkoopkosten gaat vermoedelijk naar mediaproducties.           </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 59926,
+          "tekst": "goed",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 59927,
+          "tekst": "fout",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 17722,
+        "tekst": "<p class='opdracht'>Is de volgende zin wat stijl betreft goed of fout?</p><br><p class='vraag'>In het jaar van de oprichting van de Premier League, was zeventig procent van de basisspelers in de competitie Engels, maar dat percentage liep terug tot dertig.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 36374,
+          "tekst": "goed",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36375,
+          "tekst": "fout",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 17831,
+        "tekst": "<p class='opdracht'>Wat moet er ingevuld worden?</p><br><p class='vraag'>Vroeger had ik blond haar ... eerst in een paardenstaart, later in een vlecht zat.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 36642,
+          "tekst": "dat",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36643,
+          "tekst": "die",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36644,
+          "tekst": "wat",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 17832,
+        "tekst": "<p class=\"opdracht\">Wat moet er ingevuld worden?</p><br><p class=\"vraag\">Facebook gebruikt jouw gegevens, maar vraagt het ... ook om je toestemming?  </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 36645,
+          "tekst": "jou",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36646,
+          "tekst": "jouw",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 4464,
+        "tekst": "<p class='opdracht'>Vul in: hen of hun.</p><br><p class='vraag'>Het antwoord dat ik [hier] gaf, was kennelijk niet wat ze verwachtten.</p>",
+        "id_vraag_type": 1,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 9232,
+          "tekst": "hun",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 15936,
+        "tekst": "<p class='opdracht'>Wat moet er ingevuld worden?</p><br><p class='vraag'>De rijstmuis, die tweemaal zo groot is … een kat, brengt vaak schade toe aan de kokosnootplantages.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 31305,
+          "tekst": "als",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 31306,
+          "tekst": "dan",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 20019,
+        "tekst": "<p class='opdracht'>Wat moet er ingevuld worden?</p><br><p class='vraag'>Op de camping kopen ... geen verse ingrediënten, omdat ze geen koelkast hebben.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 41282,
+          "tekst": "sommige",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 41283,
+          "tekst": "sommigen",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 15939,
+        "tekst": "<p class='opdracht'>Wat moet er ingevuld worden?</p><br><p class='vraag'>De overheid adviseert niet naar het Midden Oosten te reizen … dat strikt noodzakelijk is. </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 31311,
+          "tekst": "mits",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 31312,
+          "tekst": "tenzij",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 17917,
+        "tekst": "<p class='opdracht'>Wat moet er ingevuld worden?</p><br><p class='vraag'>Het dubbelgevouwen document ter … van een A4 wordt tentoongesteld in het Stadsarchief.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 36856,
+          "tekst": "grootte",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36858,
+          "tekst": "grote",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 5870,
+        "tekst": "<p class=\"opdracht\">Wat moet er ingevuld worden?</p><br><p class=\"vraag\">Zijn astma is te ... aan de grote hoeveelheid uitlaatgassen. </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 12433,
+          "tekst": "danken",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 12434,
+          "tekst": "wijten",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 17748,
+        "tekst": "<p class=\"opdracht\">Wat moet er ingevuld worden?</p><br><p class=\"vraag\">Zowel Europa als de Verenigde Staten … aan maatregelen om belastingontwijking tegen te gaan.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 36433,
+          "tekst": "werkt",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36434,
+          "tekst": "werken",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 8069,
+        "tekst": "<p class='opdracht'>Wat moet er ingevuld worden?</p><br><p class='vraag'>Het receptenboek … ik me de titel niet herinner, heeft als thema de Italiaanse keuken.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 16413,
+          "tekst": "van wie",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 16414,
+          "tekst": "waarvan",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 21715,
+        "tekst": "<p class='opdracht'>Wat moet er ingevuld worden?</p><br><p class='vraag'>Als ondernemer werkte Inge met meer passie en plezier dan … </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 44403,
+          "tekst": "ik",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 44404,
+          "tekst": "mij",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 1851,
+        "tekst": "<p class='opdracht'>Wat moet er ingevuld worden?</p><br><p class='vraag'><br>Verzorgers hebben vaak te weinig tijd om hun patiënten goed te laten tandenpoetsen en ... zijn daar ook niet voor getraind.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 3513,
+          "tekst": "hun",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 3514,
+          "tekst": "ze",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 1887,
+        "tekst": "<p class='opdracht'>Is de volgende zin, gelet op het gebruik van het voegwoord, goed of fout?</p><br><p class='vraag'>Doordat het water in de doucheafvoer door een constructiefout niet naar beneden stroomde, bleef het water erin staan en begon het te stinken.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 3585,
+          "tekst": "goed",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 3586,
+          "tekst": "fout",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 12516,
+        "tekst": "<p class='opdracht'>Is de volgende zin wat stijl betreft goed of fout?</p><br><p class='vraag'>Wij verexcuseren ons bij het publiek voor het lange wachten. </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 25403,
+          "tekst": "goed",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 25404,
+          "tekst": "fout",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 21805,
+        "tekst": "<p class='opdracht'>Is de volgende zin wat stijl betreft goed of fout?</p><br><p class='vraag'>Ik denk dat de president niet eeuwig kan blijven ontkennen dat het klimaatprobleem niet bestaat.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 44603,
+          "tekst": "goed",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 44604,
+          "tekst": "fout",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 15956,
+        "tekst": "<p class=\"opdracht\">Wat is het antoniem van het onderstreepte woord?</p><br><p class=\"vraag\">Een instituut in India produceert sinds kort goedkope vaccins voor mensen in <u>arme</u> landen.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 31346,
+          "tekst": "misdeelde",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 31347,
+          "tekst": "straatarme",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 31348,
+          "tekst": "rijke",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 12549,
+        "tekst": "<p class='opdracht'>Is deze zin wat stijl betreft goed of fout?</p><br><p class='vraag'>Myrthe was bang dat Rachida, die een paar appels wilde plukken, uit de boom naar beneden zou vallen. </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 25469,
+          "tekst": "goed",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 25470,
+          "tekst": "fout",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 17925,
+        "tekst": "<p class='opdracht'>Is er in de volgende zin sprake van een tautologie?</p><br><p class='vraag'>Mensen raken zelden al hun klachten kwijt door enkel en alleen een pil in te nemen.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 36874,
+          "tekst": "ja",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36875,
+          "tekst": "nee",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 1879,
+        "tekst": "<p class=\"opdracht\">Wat moet er ingevuld worden?</p><br><p class=\"vraag\">Vic heeft al zijn hoop gevestigd ... de kamer die hij morgen gaat bezichtigen, zeker gezien het feit dat hij al twaalf jaar op de wachtlijst staat en voorrang heeft op veel anderen.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 3569,
+          "tekst": "in",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 3570,
+          "tekst": "met",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 104370,
+          "tekst": "op",
+          "type": 1
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 17763,
+        "tekst": "<p class='opdracht'>Door welk voorzetsel is de onderstreepte woordgroep te vervangen? </p><br><p class='vraag'>Naarmate we <u>door middel van</u> flashbacks meer te weten komen over het verleden van de hoofdpersoon, wordt de roman beklemmender en onweerstaanbaarder. </p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 36466,
+          "tekst": "door",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36467,
+          "tekst": "na",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 36468,
+          "tekst": "vanuit",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 18067,
+        "tekst": "<p class=\"opdracht\">Wat is de betekenis van de volgende zin? </p><br><p class=\"vraag\">Hij is het levende bewijs dat je <u>met de hoed in de hand in het ganse land komt</u>; hij krijgt alles gedaan wat hij wil.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 37261,
+          "tekst": "meer bereikt als je vriendelijk bent",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 37262,
+          "tekst": "meer bereikt als je rijk bent",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 37263,
+          "tekst": "meer bereikt als je de eerste bent",
+          "type": 2
+        }
+      }
+    ]
+  ],
+  [
+    {
+      "vraag": {
+        "id": 18064,
+        "tekst": "<p class=\"opdracht\">Is er in de volgende zin sprake van sarcasme? </p><br><p class=\"vraag\">\"Jij hebt vannacht geslapen als een roos!\", snauwde de geïrriteerde, vermoeide vrouw tegen haar echtgenoot, die haar de hele nacht had wakker gehouden met zijn gesnurk.</p>",
+        "id_vraag_type": 2,
+        "id_niveau": 1
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 37254,
+          "tekst": "ja",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 37255,
+          "tekst": "nee",
+          "type": 2
+        }
+      }
+    ]
+  ]
+];
+
+function checkPageFocus() {
+  let body = document.querySelector('body');
+  let log = document.getElementById('log');
+
+  if (document.hasFocus()) {
+    log.textContent = 'This document has the focus.';
+    body.style.background = '#fff';
+  }
+  else {
+    log.textContent = 'This document does not have the focus.';
+    body.style.background = '#ccc';
+  }
+}
+
+// Check page focus every 300 milliseconds
+setInterval(checkPageFocus, 300);
+
+// Dummies om te testen
+function go_vraag() {}
+de_vraag = {id:17872};
+
+document.addEventListener('DOMContentLoaded', function() {
+    /*
+     * Waar de magie plaatsvind
+     * In het object 'json' staan alle vragen die je voor de huidige oefening/toets gaat krijgen.
+     * In het object 'de_vraag' staat oa het ID van de huidige vraag op je scherm.
+     * Als eerste zoek ik door json heen naar de huidige vraag aan de hand van het ID in de_vraag.
+     * Voorbeeld van de huidige json vraag:
+     * 0:
+     *     vraag:
+     *         code1: "Basis_A"
+     *         code2: "1"
+     *         code3: "4"
+     *         id: 4329
+     *         id_niveau: 2
+     *         id_vraag_type: 2
+     *         tekst: "<p class='opdracht'>Welk werkwoord in de volgende zin is een infinitief?</p><br><p class='vraag'>Tot overmaat van ramp kende de keeper een zwak moment waardoor Ronaldo 3-2 kon scoren.</p>"
+     * 1:
+     *     0: {antwoord: {id: 8881, tekst: "kende", type: 2}}
+     *     1: {antwoord: {id: 8882, tekst: "kon", type: 2}}
+     *     2:
+     *         antwoord:
+     *             id: 8883
+     *             tekst: "scoren"
+     *             type: 1
+     * json[1][2].antwoord.type staat voor of het een correct antwoord is of niet. 1 = goed, 2 = fout.
+     * json[1][2].antwoord.tekst staat voor het correcte antwoord.
+     * Als het een meerkeuze vraag is gebruik ik het ID om de juiste knop te vinden.
+     * Als er iets ingevuld moet worden dan gebruik ik de tekst
+     */
+    function geefHetGoedeAntwoord() {
+        for (x in json) {
+            if (json[x][0].vraag.id === de_vraag.id) {
+                for (a in json[x][1]) {
+                    if (json[x][1][a].antwoord.type === 1) {
+                        // Juiste antwoord gevonden
+                        // Meerkeuze
+                        if (de_vraag.id_vraag_type === 2 || de_vraag.id_vraag_type === 15) {
+                            document.getElementById(json[x][1][a].antwoord.id).style.backgroundColor = "lightgreen";
+                        }
+                        // Invulvraag
+                        if (de_vraag.id_vraag_type === 1 || de_vraag.id_vraag_type === 16) {
+                            document.getElementById('vraagstelling').querySelector('input').value = json[x][1][a].antwoord.tekst;
+                        }
+                        // Verbeter de zin
+                        if (de_vraag.id_vraag_type === 9) {
+                            document.getElementById('antwoord_verbeter').value = json[x][1][a].antwoord.tekst;
+                        }
+                        // Hiermee trigger je de volgende vraag
+                        // setTimeout(function () {
+                        //     $('#next').trigger('click');
+                        // }, 300);
+                        return;
+                    }
+                }
+            }
+        }
+    }
+    geefHetGoedeAntwoord();
+    /*
+     * In go_vraag word de huidige vraag verwerkt en op het scherm gezet.
+     * Deze Kopieer ik en voeg hier mijn functie aan toe.
+     */
+    let old_go_vraag = go_vraag;
+    go_vraag = function () {
+        old_go_vraag.apply(this, arguments);
+        geefHetGoedeAntwoord();
+    };
+
+});
+</script>
+
+<p id="log">Awaiting focus check.</p>
+
+<!-- Testvraag, zelfde id als in de_vraag.id -->
+<div id="vraag_view" style="margin-top: 220px;"><div id="vraagstelling"><p class="opdracht">Is het onderstreepte woord goed of fout gespeld?</p><br><p class="vraag">De actiegroep, die bestaat uit eerste- en tweedejaarsstudenten, houdt het <u>universiteitgebouw</u> al een week bezet.</p></div><div id="antwoord_wrapper"><div id="36749" class="meerk_antw">goed</div><div id="36750" class="meerk_antw">fout</div></div></div>
+
