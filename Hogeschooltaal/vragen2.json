@@ -1,0 +1,376 @@
+[
+  [
+    {
+      "vraag": {
+        "id": 13001,
+        "tekst": "<p class='opdracht'>Welke werkwoordsvorm is juist gespeld?</p><br><p class='vraag'>Ik … mijn eerste karateleraar, die mij de fijne kneepjes van de sport leerde. </p>",
+        "code1": "Basis_A",
+        "code2": "1",
+        "code3": "3",
+        "id_vraag_type": 2,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 26436,
+          "tekst": "aanbid",
+          "type": 1
+        }
+      },
+      {
+        "antwoord": {
+          "id": 26437,
+          "tekst": "aanbidt",
+          "type": 2
+        }
+      },
+      {
+        "antwoord": {
+          "id": 26438,
+          "tekst": "aanbit",
+          "type": 2
+        }
+      }
+    ],
+    "Als het werkwoord een persoonsvorm in de tegenwoordige tijd is en bij <i>ik</i> hoort, schrijf je de stam.",
+    5
+  ],
+  [
+    {
+      "vraag": {
+        "id": 21928,
+        "tekst": "<p class='opdracht'>Wat is de geschreven stam van het werkwoord tussen haakjes? Sleep het juiste antwoord in de zin.</p><br><p class='vraag'>Hoe [hier] (combineren) je werk, studie en een tijdrovend sociaal leven? </p>",
+        "code1": "Basis_A",
+        "code2": "1",
+        "code3": "3",
+        "id_vraag_type": 13,
+        "id_niveau": 5
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 44739,
+          "tekst": "combineer",
+          "type": 1
+        }
+      }
+    ],
+    "Bij <i>combineren</i> is de eigenlijke stam <i>combiner</i>, maar we schrijven <i>combineer</i>. Dit heeft te maken met de regel voor de klinkers in gesloten lettergrepen: een lange klinker wordt in een gesloten lettergreep geschreven met twee tekens.",
+    5
+  ],
+  [
+    {
+      "vraag": {
+        "id": 21411,
+        "tekst": "<p class='opdracht'>Vul de juiste vorm van het werkwoord in. </p><br><p class='vraag'>De vraag is hoe ik een geschikte huisgenoot [hier] (vinden).</p>",
+        "code1": "Basis_A",
+        "code2": "1",
+        "code3": "3",
+        "id_vraag_type": 1,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 43795,
+          "tekst": "vind",
+          "type": 1
+        }
+      }
+    ],
+    "Als het werkwoord een persoonsvorm in de tegenwoordige tijd is en bij <i>ik</i> hoort, schrijf je de stam.",
+    5
+  ],
+  [
+    {
+      "vraag": {
+        "id": 21922,
+        "tekst": "<p class='opdracht'>Wat is de geschreven stam van het werkwoord tussen haakjes? Sleep het juiste antwoord in de zin.</p><br><p class='vraag'>Omdat ik de weddenschap heb verloren, [hier] (beloven) ik dat ik straks je band zal plakken. </p>",
+        "code1": "Basis_A",
+        "code2": "1",
+        "code3": "3",
+        "id_vraag_type": 13,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 44733,
+          "tekst": "beloof",
+          "type": 1
+        }
+      }
+    ],
+    "Bij <i>beloven</i> is de eigenlijke stam <i>belov</i>, maar we schrijven <i>beloof</i>. Als de stam van het werkwoord op een –z of –v eindigt, schrijven we een -s of -f aan het einde van het woord. In het Nederlands schrijven we immers nooit –z of –v aan het woordeinde.//belov_beloof",
+    5
+  ],
+  [
+    {
+      "vraag": {
+        "id": 12433,
+        "tekst": "<p class='opdracht'>Wat is de geschreven stam van het werkwoord tussen haakjes?</p><br><p class='vraag'>Ik [hier] (bewijzen) met deze wedstrijd dat ik thuishoor in het eerste team. </p>",
+        "code1": "Basis_A",
+        "code2": "1",
+        "code3": "3",
+        "id_vraag_type": 1,
+        "id_niveau": 5
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 25285,
+          "tekst": "bewijs",
+          "type": 1
+        }
+      }
+    ],
+    "Bij <i>bewijzen</i> is de eigenlijke stam <i>bewijz</i>, maar we schrijven <i>bewijs</i>. Als de stam van het werkwoord op een –z of –v eindigt, schrijven we een -s of -f aan het einde van het woord. In het Nederlands schrijven we immers nooit –z of –v aan het woordeinde.",
+    5
+  ],
+  [
+    {
+      "vraag": {
+        "id": 21941,
+        "tekst": "<p class='opdracht'>Wat is de geschreven stam van het werkwoord tussen haakjes? Sleep het juiste antwoord in de zin.</p><br><p class='vraag'>[hier] (Laten) jij straks de buurvrouw binnen? Ze komt een paar stoelen lenen voor vrienden die langskomen.</p>",
+        "code1": "Basis_A",
+        "code2": "1",
+        "code3": "3",
+        "id_vraag_type": 13,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 44752,
+          "tekst": "Laat",
+          "type": 1
+        }
+      }
+    ],
+    "Bij <i>laten</i> is de eigenlijke stam <i>lat</i>, maar we schrijven <i>laat</i>. Dit heeft te maken met de regel voor de klinkers in gesloten lettergrepen: een lange klinker wordt in een gesloten lettergreep geschreven met twee tekens.//Laat_Lat",
+    5
+  ],
+  [
+    {
+      "vraag": {
+        "id": 84,
+        "tekst": "<p class='opdracht'>Wat is de geschreven stam van het werkwoord tussen haakjes?</p><br><p class='vraag'>Ik … (bidden) met mijn broertje voor de gezondheid van onze oma.<br><br>[hier]</p>",
+        "code1": "Basis_A",
+        "code2": "1",
+        "code3": "3",
+        "id_vraag_type": 1,
+        "id_niveau": 5
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 170,
+          "tekst": "bid",
+          "type": 1
+        }
+      }
+    ],
+    "Bij <i>bidden</i> is de eigenlijke stam <i>bidd</i>, maar we schrijven <i>bid</i>. Een eindmedeklinker van een woord wordt nooit dubbel geschreven.",
+    5
+  ],
+  [
+    {
+      "vraag": {
+        "id": 83,
+        "tekst": "<p class='opdracht'>Wat is de geschreven stam van het werkwoord tussen haakjes?</p><br><p class='vraag'>Als ik iemand ... (troosten), geef ik die persoon meestal een kop thee en een knuffel. <br><br>[hier]</p>",
+        "code1": "Basis_A",
+        "code2": "1",
+        "code3": "3",
+        "id_vraag_type": 1,
+        "id_niveau": 5
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 169,
+          "tekst": "troost",
+          "type": 1
+        }
+      }
+    ],
+    "Je vindt de geschreven stam hier door de uitgang –en van het hele werkwoord (de infinitief) af te halen.",
+    5
+  ],
+  [
+    {
+      "vraag": {
+        "id": 12445,
+        "tekst": "<p class='opdracht'>Wat is de geschreven stam van het werkwoord tussen haakjes?</p><br><p class='vraag'>In de hotellobby [hier] (zitten) ik te wachten op mijn reisgenoten.  </p>",
+        "code1": "Basis_A",
+        "code2": "1",
+        "code3": "3",
+        "id_vraag_type": 1,
+        "id_niveau": 5
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 25297,
+          "tekst": "zit",
+          "type": 1
+        }
+      }
+    ],
+    "Bij <i>zitten</i> is de eigenlijke stam <i>zitt</i>, maar we schrijven <i>zit</i>. Een eindmedeklinker van een woord wordt nooit dubbel geschreven.",
+    5
+  ],
+  [
+    {
+      "vraag": {
+        "id": 12454,
+        "tekst": "<p class='opdracht'>Wat is de geschreven stam van het werkwoord tussen haakjes?</p><br><p class='vraag'>In de tunnel [hier] (bekladden) ik de muren met de naam van mijn vriendin. </p>",
+        "code1": "Basis_A",
+        "code2": "1",
+        "code3": "3",
+        "id_vraag_type": 1,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 25306,
+          "tekst": "beklad",
+          "type": 1
+        }
+      }
+    ],
+    "Bij <i>bekladden</i> is de eigenlijke stam <i>bekladd</i>, maar we schrijven <i>beklad</i>. Een eindmedeklinker van een woord wordt nooit dubbel geschreven.",
+    5
+  ],
+  [
+    {
+      "vraag": {
+        "id": 85,
+        "tekst": "<p class='opdracht'>Wat is de geschreven stam van het werkwoord tussen haakjes?</p><br><p class='vraag'>Als coach … (stimuleren) ik jongvolwassenen na te denken over hun toekomst.<br><br>[hier]  </p>",
+        "code1": "Basis_A",
+        "code2": "1",
+        "code3": "3",
+        "id_vraag_type": 1,
+        "id_niveau": 5
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 171,
+          "tekst": "stimuleer",
+          "type": 1
+        }
+      }
+    ],
+    "Bij <i>stimuleren</i> is de eigenlijke stam <i>stimuler</i>, maar we schrijven <i>stimuleer</i>. Dit heeft te maken met de regel voor de klinkers in gesloten lettergrepen: een lange klinker wordt in een gesloten lettergreep geschreven met twee tekens.",
+    5
+  ],
+  [
+    {
+      "vraag": {
+        "id": 89,
+        "tekst": "<p class='opdracht'>Wat is de geschreven stam van het werkwoord tussen haakjes?</p><br><p class='vraag'>Nog steeds … (tobben) ik over de balans tussen werk en privé.<br><br>[hier] </p>",
+        "code1": "Basis_A",
+        "code2": "1",
+        "code3": "3",
+        "id_vraag_type": 1,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 175,
+          "tekst": "tob",
+          "type": 1
+        }
+      }
+    ],
+    "Bij <i>tobben</i> is de eigenlijke stam <i>tobb</i>, maar we schrijven <i>tob</i>. Een eindmedeklinker van een woord wordt nooit dubbel geschreven.",
+    5
+  ],
+  [
+    {
+      "vraag": {
+        "id": 21931,
+        "tekst": "<p class='opdracht'>Wat is de geschreven stam van het werkwoord tussen haakjes? Sleep het juiste antwoord in de zin.</p><br><p class='vraag'>Ik [hier] (verhuizen) aanstaande maandag naar een appartement in Nieuwegein. </p>",
+        "code1": "Basis_A",
+        "code2": "1",
+        "code3": "3",
+        "id_vraag_type": 13,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 44742,
+          "tekst": "verhuis",
+          "type": 1
+        }
+      }
+    ],
+    "Bij <i>verhuizen</i> is de eigenlijke stam <i>verhuiz</i>, maar we schrijven <i>verhuis</i>. Als de stam van het werkwoord op een -z of -v eindigt, schrijven we een -s of -f aan het einde van het woord. In het Nederlands schrijven we nooit -z of -v aan het woordeinde.//verhuiz_verhuis",
+    5
+  ],
+  [
+    {
+      "vraag": {
+        "id": 12456,
+        "tekst": "<p class=\"opdracht\">Wat is de geschreven stam van het werkwoord tussen haakjes?</p><br><p class=\"vraag\">Op de sportclub [hier] (worden) je dankzij je talent geaccepteerd door je teamgenoten.</p>",
+        "code1": "Basis_A",
+        "code2": "1",
+        "code3": "3",
+        "id_vraag_type": 1,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 25308,
+          "tekst": "word",
+          "type": 1
+        }
+      }
+    ],
+    "Je vindt de eigenlijke stam door de uitgang –en van het hele werkwoord (de infinitief) af te halen.",
+    5
+  ],
+  [
+    {
+      "vraag": {
+        "id": 21939,
+        "tekst": "<p class=\"opdracht\">Wat is de geschreven stam van het werkwoord tussen haakjes? Sleep het juiste antwoord in de zin.</p><br><p class=\"vraag\">Ik [hier] (word) iedere ochtend wakker van het gekraai van de haan van de buren.</p>",
+        "code1": "Basis_A",
+        "code2": "1",
+        "code3": "3",
+        "id_vraag_type": 13,
+        "id_niveau": 2
+      }
+    },
+    [
+      {
+        "antwoord": {
+          "id": 44750,
+          "tekst": "word",
+          "type": 1
+        }
+      }
+    ],
+    "Je vindt de geschreven stam door de uitgang -en van het hele werkwoord (de infinitief) af te halen.//wordt_word",
+    5
+  ]
+]
