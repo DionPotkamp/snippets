@@ -1,0 +1,116 @@
+
+.overlay {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.overlay__content {
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-height: 90%;
+    max-width: 800px;
+}
+
+.overlay__close {
+    position: absolute;
+    right: 0;
+    padding: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+    border: 3px solid black;
+    font-size: 1.5rem;
+    margin: -1rem;
+    border-radius: 2rem;
+    z-index: 100;
+    box-sizing: content-box;
+}
+
+.overlay__content video {
+    width: 100%;
+    height: 100%;
+}
+
+.overlay__content canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+#interactive.viewport {
+    position: relative;
+}
+
+#interactive.viewport > canvas, #interactive.viewport > video {
+    max-width: 100%;
+    width: 100%;
+}
+
+canvas.drawing, canvas.drawingBuffer {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#result_strip {
+    margin: 10px 0;
+    border-top: 1px solid #EEE;
+    border-bottom: 1px solid #EEE;
+    padding: 10px 0;
+}
+/* line 28, ../sass/_viewport.scss */
+#result_strip ul.thumbnails {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    width: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+/* line 37, ../sass/_viewport.scss */
+#result_strip ul.thumbnails > li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 160px;
+}
+/* line 41, ../sass/_viewport.scss */
+#result_strip ul.thumbnails > li .thumbnail {
+    padding: 5px;
+    margin: 4px;
+    border: 1px dashed #CCC;
+}
+/* line 46, ../sass/_viewport.scss */
+#result_strip ul.thumbnails > li .thumbnail img {
+    max-width: 140px;
+}
+/* line 49, ../sass/_viewport.scss */
+#result_strip ul.thumbnails > li .thumbnail .caption {
+    white-space: normal;
+}
+/* line 51, ../sass/_viewport.scss */
+#result_strip ul.thumbnails > li .thumbnail .caption h4 {
+    text-align: center;
+    word-wrap: break-word;
+    height: 40px;
+    margin: 0px;
+}
+/* line 61, ../sass/_viewport.scss */
+#result_strip ul.thumbnails:after {
+    content: "";
+    display: table;
+    clear: both;
+}
