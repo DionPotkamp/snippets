@@ -26,6 +26,7 @@ body,
 .content, 
 .node-drag__container, 
 .node--selected, 
+.infobar, 
 .sidebar__content {
     background-color: #252525; color: #EEEEEE;
 }
