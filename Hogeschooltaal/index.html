@@ -2531,11 +2531,13 @@ document.addEventListener('DOMContentLoaded', function() {
             $('#next').trigger('click');
         }, 300);
     }
+
     let old_verder_vraag = verder_vraag;
     verder_vraag = function () {
         old_verder_vraag.apply(this, arguments);
         gaNaarDeVolgendeVraag();
     };
+
     function geefHetGoedeAntwoord() {
         for (x in json) {
             if (json[x][0].vraag.id === de_vraag.id) {
@@ -2555,6 +2557,26 @@ document.addEventListener('DOMContentLoaded', function() {
                             setTimeout(function () {
                                 $('#verstuur_antwoord').trigger('click');
                             }, 300);
+                        }
+                        // Klik op het juiste zinsdeel
+                        if (de_vraag.id_vraag_type === 8) {
+                            let antwoord = json[x][1][a].antwoord.tekst;
+                            let antwoordIDs = antwoord.split('||')[0].split('_');
+                            let antwoorden = antwoordIDs.length;
+                            let aantalClicks = 0;
+                            for (let i = 0; i < antwoorden; i++) {
+                                let clickMe = document.getElementById(antwoordIDs[i]);
+                                clickMe.style.backgroundColor = "lightgreen";
+                            }
+                            setInterval(function() {
+                                    let actief_klik = document.getElementsByClassName('actief_klik');
+                                    aantalClicks = actief_klik.length;
+                                    if (antwoorden === aantalClicks) {
+                                        clearInterval();
+                                        $('#verstuur_antwoord_klik').trigger('click');
+                                    }
+                            }, 300);
+
                         }
                         // Verbeter de zin
                         if (de_vraag.id_vraag_type === 9) {
